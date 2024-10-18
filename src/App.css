@@ -1,0 +1,10 @@
+.App {
+  font-family: Arial, sans-serif;
+  background-color: pink;
+  padding: 20px;
+  border: 1px solid black;
+}
+.App-header {
+  text-align: center;  /* Esto centra el contenido de tipo inline como <img> */
+  padding: 20px;
+}
