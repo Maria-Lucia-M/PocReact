@@ -1,10 +1,30 @@
+/* Centramos todo el contenido y cambiamos el color de fondo */
 .App {
-  font-family: Arial, sans-serif;
-  background-color: pink;
-  padding: 20px;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente */
+  align-items: center;       /* Centra verticalmente */
+  height: 100vh;             /* Altura completa de la ventana */
+  background-color: pink; /* Cambia el color de fondo */
 }
-.App-header {
-  text-align: center;  /* Esto centra el contenido de tipo inline como <img> */
+
+.CurrencyConverter {
+  text-align: center;        /* Centra el texto y los elementos dentro del contenedor */
   padding: 20px;
+  background-color: pink;    /* Fondo blanco para el contenido */
+  border-radius: 8px;        /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto suave */
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: blueviolet; /* Color de fondo del botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* Cambia el color cuando el mouse está encima */
 }
