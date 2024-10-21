@@ -16,9 +16,18 @@ const CurrencyPesoConverter = () => {
   }, []);
 
   const convertCurrency = async () => {
-    // En una app real, llamarías a una API para obtener las tasas de cambio.
-    // A modo de ejemplo, vamos a hacer una conversión simulada con tasa fija
-    const exchangeRate = 1200; // Supongamos que 1 USD = 1200 PESOS
+    let exchangeRate;
+
+    // Condición para verificar si la conversión es de USD a PESOS o de PESOS a USD
+    if (fromCurrency === 'PESOS' && toCurrency === 'USD') {
+      exchangeRate = 1 / 1200; // Si está convirtiendo de PESOS a USD, la tasa es 1/1200
+    } else if (fromCurrency === 'USD' && toCurrency === 'PESOS') {
+      exchangeRate = 1200; // Si está convirtiendo de USD a PESOS, la tasa es 1200
+    } else {
+      exchangeRate = 1; // Si se selecciona la misma moneda, la tasa de cambio es 1
+    }
+
+    // Realizamos la conversión
     const conversionResult = amount * exchangeRate;
     setResult(conversionResult.toFixed(2));
   };
@@ -30,7 +39,7 @@ const CurrencyPesoConverter = () => {
         <input
           type="number"
           value={amount}
-          onChange={(e) => setAmount(e.target.value)}
+          onChange={(e) => setAmount(Number(e.target.value))}  // Convertir el valor a número
         />
         <select
           value={fromCurrency}
