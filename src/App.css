@@ -6,11 +6,18 @@
   height: 100vh;             /* Altura completa de la ventana */
   background-color: pink; /* Cambia el color de fondo */
 }
+/* Añadimos un estilo al logo para centrarlo y ajustar el tamaño */
+.App-logo {
+  width: 150px; /* Tamaño de la imagen */
+  height: 150px;
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  object-fit: cover;  /* Asegura que la imagen encaje bien en el área circular */
+}
 
 .CurrencyConverter {
   text-align: center;        /* Centra el texto y los elementos dentro del contenedor */
   padding: 20px;
-  background-color: pink;    /* Fondo blanco para el contenido */
+  background-color: rgb(192, 255, 234);    /* Fondo blanco para el contenido */
   border-radius: 8px;        /* Bordes redondeados */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto suave */
 }
@@ -28,3 +35,4 @@ button {
 button:hover {
   background-color: #45a049; /* Cambia el color cuando el mouse está encima */
 }
+

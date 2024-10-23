@@ -33,6 +33,7 @@ const CurrencyPesoConverter = () => {
   };
 
   return (
+
     <div style={{ textAlign: "center", margin: "20px" }}>
       <h2>Currency Converter</h2>
       <div>
