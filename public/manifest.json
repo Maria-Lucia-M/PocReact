@@ -8,15 +8,12 @@
       "type": "image/jpg"
     },
     {
-      "src": "logoDolar.png",
-      "type": "image/png",
+      "src": "icono.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
-    },
-    {
-      "src": "logoPeso.png",
-      "type": "image/png",
-      "sizes": "512x512"
+    
     }
+
   ],
   "start_url": ".",
   "display": "standalone",
