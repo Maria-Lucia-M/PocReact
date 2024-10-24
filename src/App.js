@@ -1,17 +1,20 @@
 import React from 'react';
 import './App.css';
-import CurrencyPesoConverter from './components/ConvertirDolar';
-import logo from './components/icono.jpg';
 
+import logo from './components/icono.jpg';
+const CurrencyPesoConverter = React.lazy(() => import('./components/ConvertirDolar'));
 function App() {
   return (
-    <div className="App">
-       <CurrencyPesoConverter />
-       <header className="App-header">
-       <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <div className="App">
+        <CurrencyPesoConverter />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+      </div>
+    </React.Suspense>
   );
 }
 
 export default App;
+
